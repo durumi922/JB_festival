@@ -126,24 +126,28 @@ header h1 {
 }
 
 .box-content {
-  display: none;
   padding: 10px;
   background-color: #2C1A5E;
   color: white;
   border: 1px solid #EED2FF;
-  margin-top: 30px; /* 푸드트럭 박스와 메뉴 박스 간의 간격을 추가 */
-  margin-bottom: 20px;
-  overflow: hidden; /* 내용이 넘어가지 않도록 숨김 */
-  max-height: 0; /* 기본 max-height를 0으로 설정 */
-  transition: max-height 0.5s ease, opacity 0.5s ease; /* 애니메이션 효과 */
-  opacity: 0; /* 초기 불투명도 설정 */
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
   text-align: center; /* 내용 가운데 정렬 */
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out, visibility 0s 0.5s; /* visibility를 나중에 변경 */
 }
+
 .box-content.show {
-  display: block; /* 토글이 열릴 때 display: block으로 설정 */
+  display: block; 
+  margin-top: 30px;
+  margin-bottom: 20px;
   max-height: 500px; /* 최대 높이 설정 */
-  opacity: 1; /* 불투명도 설정 */
+  opacity: 1;
+  visibility: visible; /* visibility를 보여줌 */
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
 }
+
 
 .box-content h4 {
   font-size: 3em; /* 제목 글자 크기 */
