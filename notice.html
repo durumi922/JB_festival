@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <link rel="stylesheet" href="notice.css">
+</head>
+<body>
+    <!-- 게시판 첫 화면 -->
+     <!--13~17 가져다 쓰시면 됩니다!-->
+    <div id="board-screen" class="screen">
+        <header>
+            <img src="img/logo.png" alt="Logo">
+            <h1>게시판</h1>
+            <button class="menu-btn">☰</button>
+        </header>
+        <main>
+            <div class="search-container">
+                <input type="text" placeholder="검색" id="search-box" oninput="searchPosts()">
+                <button class="write-btn" onclick="showWriteScreen()">글쓰기</button>
+            </div>
+            <section class="recent-posts">
+                <h2>최근 게시물</h2>
+                <ul id="post-list">
+                    <li class="no-posts">아직 작성된 게시물이 없습니다!<br> 첫 게시물을 작성해보세요!</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>페이지 번호: 1 / 1</p>
+        </footer>
+    </div>
+
+    <!-- 글쓰기 화면 -->
+    <div id="write-screen" class="screen hidden">
+        <header>
+            <img src="img/logo.png" alt="Logo">
+            <h1>게시판</h1>
+            <button class="menu-btn">☰</button>
+        </header>
+        <main>
+            <div class="write-form">
+                <input type="text" placeholder="제목" id="title-box">
+                <input type="file" id="image-input" accept="image/*">
+                <textarea id="content-box" placeholder="내용을 입력하세요..."></textarea><br>부적절한 게시글은 삭제될 수 있습니다</textarea>
+                
+                <button class="post-btn" onclick="previewPost()">게시</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- 글보기 화면 (게시글 보기) -->
+<div id="view-post-screen" class="screen hidden">
+    <header>
+        <img src="img/logo.png" alt="Logo">
+        <h1>게시글 보기</h1>
+        <button class="menu-btn">☰</button>
+    </header>
+
+    <main>
+        <div class="post-view">
+            <h2 id="view-post-title"></h2>
+            <img id="view-post-image" alt="이미지" style="display:none;" />
+            <p id="view-post-content"></p>
+        </div>
+        <button class="back-btn" onclick="goBackToBoard()">뒤로 가기</button>
+    </main>
+</div>
+
+
+    <script src="notice.js"></script>
+</body>
+</html>

@@ -39,6 +39,14 @@
     color: #8a0017;
   }
   
+  .menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #8a0017;
+    cursor: pointer;
+  }
+
   .content {
     margin-top: 85px;
     display: flex;

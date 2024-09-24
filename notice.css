@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    color: white;
+}
+
+header img {
+    width: 50px;
+}
+
+header h1 {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #8a0017;
+    cursor: pointer;
+}
+
+.screen {
+    width: 90%;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 50px;  
+}
+
+.search-container input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #8a0017;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.recent-posts {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.recent-posts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recent-posts ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recent-posts ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.no-posts {
+    color: #777;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.write-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px; 
+}
+
+.write-form input, .write-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.write-form button {
+    background-color: #8a0017;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+textarea {
+    height: 120px;
+}
+
+.post-view img {
+    max-width: 100%;
+    margin-top: 15px;
+}
+
+.back-btn {
+    margin-top: 20px;
+    background-color: #8a0017;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
