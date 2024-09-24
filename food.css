@@ -1,68 +1,157 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 헤더 스타일 */
+/* 고정된 헤더 스타일 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  background-color: #8a0017; /* 배경 색상 */
+  color: white; /* 텍스트 색상 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  z-index: 1000; /* 다른 요소 위에 위치 */
+  height: 70px; /* 헤더의 높이 지정 */
+}
+
+header img {
+  width: 50px;
+}
+
+header h1 {
+  font-size: 20px;
+  margin-left: 10px;
+  color: white;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white; /* 메뉴 버튼의 텍스트 색상 */
+  cursor: pointer;
+}
+
+.content {
+  margin-top: 85px; /* 헤더 높이 + 여유 공간 */
+  padding: 20px;
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+}
+
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-bottom: 20px; /* 각 박스들 사이 간격 */
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.box-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.box-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.box-footer {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  z-index: 2;
+}
+
+.box-toggle {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 2;
+  color: white;
+}
+
+.box-content {
+  display: none;
+  padding: 10px;
+  background-color: #2C1A5E;
+  color: white;
+  border: 1px solid #EED2FF;
+  animation: toggleAnimation 0.3s ease-out;
+}
+
+.menu-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #EED2FF;
+  background-color: #2C1A5E;
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@keyframes toggleAnimation {
+  from {
+    max-height: 0;
+    opacity: 0;
   }
-  
-  body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+  to {
+    max-height: 500px;
+    opacity: 1;
   }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .box {
-    position: relative;
-    width: 300px;
-    height: 400px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .box-image {
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-  }
-  
-  .box-title {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.5em;
-    font-weight: bold;
-    color: white;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  .box-footer {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    font-size: 0.9em;
-    line-height: 1.2;
-  }
-  
-  .box-toggle {
-    position: absolute;
-    bottom: 45px;
-    right: 10px;
-    cursor: pointer;
-  }
-  
-  .box-content {
-    display: none;
-    background-color: #f9f9f9;
-    padding: 10px;
-  }
-  
+}
