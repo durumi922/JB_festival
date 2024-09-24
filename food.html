@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Layout with Toggle</title>
+  <link rel="stylesheet" href="food.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 푸드트럭 박스 -->
+    <div class="box" id="foodtruck-box">
+      <img src="img/푸드트럭 이미지.jpg" alt="푸드트럭" class="box-image">
+      <div class="box-title">푸드트럭</div>
+      <div class="box-footer">
+        <p>2024-09-23</p>
+        <p>쓰레기는 쓰레기통에</p>
+      </div>
+      <div class="box-toggle">
+        <span>▼</span>
+      </div>
+      <div class="box-content">
+        <p>메뉴: 햄버거, 핫도그, 타코</p>
+      </div>
+    </div>
+
+    <!-- 주류 박스 -->
+    <div class="box">
+      <img src="img/맥주 이미지.jpg" alt="주류" class="box-image">
+      <div class="box-title">주류</div>
+      <div class="box-footer">
+        <p>2024-09-23</p>
+        <p>미성년자 금지</p>
+      </div>
+    </div>
+
+    <!-- 테이블 박스 -->
+    <div class="box">
+      <img src="img/테이블 이미지 2.jpg" alt="테이블" class="box-image">
+      <div class="box-title">테이블</div>
+      <div class="box-footer">
+        <p>2024-09-23</p>
+        <p>예약 필수</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="food.js"></script>
+</body>
+</html>
