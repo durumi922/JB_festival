@@ -126,7 +126,6 @@ header h1 {
 }
 
 .box-content {
-  padding: 10px;
   background-color: #2C1A5E;
   color: white;
   border: 1px solid #EED2FF;
@@ -136,18 +135,18 @@ header h1 {
   visibility: hidden;
   text-align: center; /* 내용 가운데 정렬 */
   transition: max-height 0.5s ease-out, opacity 0.5s ease-out, visibility 0s 0.5s; /* visibility를 나중에 변경 */
+
+
 }
 
 .box-content.show {
   display: block; 
-  margin-top: 30px;
   margin-bottom: 20px;
   max-height: 500px; /* 최대 높이 설정 */
   opacity: 1;
   visibility: visible; /* visibility를 보여줌 */
   transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
 }
-
 
 .box-content h4 {
   font-size: 3em; /* 제목 글자 크기 */

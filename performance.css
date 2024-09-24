@@ -121,17 +121,17 @@
     background-color: #2C1A5E;
     color: white;
     border: 1px solid #EED2FF;
+
     overflow: hidden;
     max-height: 0;
     opacity: 0;
     visibility: hidden;
     transition: max-height 0.5s ease-out, opacity 0.5s ease-out, visibility 0s 0.5s;
-  }
+}
   
   .box-content.show {
     max-height: 1000px; /* 충분히 큰 값으로 설정 */
     opacity: 1;
-    margin-top: 30px;
     margin-bottom: 20px;
     visibility: visible;
     transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
